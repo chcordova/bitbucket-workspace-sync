@@ -1,0 +1,36 @@
+# Credentials
+*credentials*.txt
+!examples/credentials.example.txt
+
+# Metrics output
+clone_metrics-*.json
+clone_metrics-*.csv
+clone_metrics-*.html
+clone_metrics-*.md
+
+# Cache files
+.repo_cache.json
+.clone_progress
+
+# Cloned repositories
+ibkteam/
+*/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
