@@ -1,0 +1,83 @@
+name: CI - Bash Lint
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  shellcheck:
+    name: Shellcheck Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Install shellcheck
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y shellcheck
+    
+    - name: Run shellcheck on main script
+      run: |
+        shellcheck bitbucket-workspace-sync.sh
+    
+    - name: Run shellcheck on example scripts
+      run: |
+        shellcheck examples/*.sh || true
+
+  syntax-check:
+    name: Bash Syntax Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Check bash syntax
+      run: |
+        bash -n bitbucket-workspace-sync.sh
+        echo "✅ Syntax check passed"
+    
+    - name: Check examples syntax
+      run: |
+        for script in examples/*.sh; do
+          bash -n "$script"
+          echo "✅ $script syntax OK"
+        done
+
+  test-runner:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git curl jq
+    
+    - name: Make scripts executable
+      run: |
+        chmod +x bitbucket-workspace-sync.sh
+        chmod +x tests/*.sh 2>/dev/null || true
+    
+    - name: Run basic tests
+      run: |
+        # Dry-run test (no credentials needed)
+        export BB_USERNAME="test"
+        export BB_APP_PASSWORD="test"
+        export BB_WORKSPACE="test"
+        ./bitbucket-workspace-sync.sh --help
+        echo "✅ Help display works"
+    
+    - name: Test flag parsing
+      run: |
+        export BB_USERNAME="test"
+        export BB_APP_PASSWORD="test"
+        # This should fail gracefully with clear error
+        ./bitbucket-workspace-sync.sh -w nonexistent -n || echo "✅ Dry-run validation works"

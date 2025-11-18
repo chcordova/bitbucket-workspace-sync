@@ -12,9 +12,8 @@ clone_metrics-*.md
 .repo_cache.json
 .clone_progress
 
-# Cloned repositories
+# Cloned repositories (only specific workspace folders)
 ibkteam/
-*/
 
 # OS files
 .DS_Store
