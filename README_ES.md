@@ -128,6 +128,24 @@ source credentials.txt
 
 ---
 
+## 🔄 Cómo Funciona
+
+1. **Obtiene** la lista completa de repos vía Bitbucket API v2 (paginada)
+2. **Cachea** metadatos por 1 hora para reducir llamadas API
+3. **Prioriza** repositorios por tamaño (pequeños primero)
+4. **Clona** repos faltantes o **actualiza** los existentes
+5. **Detecta** árboles de trabajo sucios y los omite
+6. **Genera** métricas detalladas y health score
+7. **Envía** alertas si está configurado
+
+**Lógica de Actualización:**
+- Repo faltante → `git clone`
+- Repo existente → `git fetch && git merge --ff-only`
+- Árbol de trabajo sucio → omitir con advertencia
+- Sin rama por defecto → omitir
+
+---
+
 ## 📚 Documentación
 
 - [📖 Guía de Instalación](docs/INSTALLATION.md)
@@ -165,7 +183,7 @@ MIT © 2025 - Ver [LICENSE](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-chcordova-181717?style=flat&logo=github)](https://github.com/chcordova)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/charlescordova)
 
-Si este proyecto te resulta útil, considera darle una⭐
+Si este proyecto te resulta útil, considera darle una ⭐
 
 [🐛 Reportar Bug](../../issues) • [✨ Solicitar Feature](../../issues) • [💬 Discusiones](../../discussions)
 
