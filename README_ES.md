@@ -158,6 +158,15 @@ MIT © 2025 - Ver [LICENSE](LICENSE)
 
 ---
 
-<p align="center">
-  Hecho con ❤️ por Charles Córdova
-</p>
+<div align="center">
+
+### 👨‍💻 Desarrollado por Charles Córdova
+
+[![GitHub](https://img.shields.io/badge/GitHub-chcordova-181717?style=flat&logo=github)](https://github.com/chcordova)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/charlescordova)
+
+Si este proyecto te resulta útil, considera darle una⭐
+
+[🐛 Reportar Bug](../../issues) • [✨ Solicitar Feature](../../issues) • [💬 Discusiones](../../discussions)
+
+</div>

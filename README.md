@@ -255,10 +255,15 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 ---
 
-<p align="center">
-  Made with ❤️ by Charles Córdova
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="#bitbucket-workspace-sync">⬆️ Back to top</a>
-</p>
+### 👨‍💻 Developed by Charles Córdova
+
+[![GitHub](https://img.shields.io/badge/GitHub-chcordova-181717?style=flat&logo=github)](https://github.com/chcordova)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/charlescordova)
+
+If you find this project useful, please consider giving it a ⭐
+
+[🐛 Report Bug](../../issues) • [✨ Request Feature](../../issues) • [💬 Discussions](../../discussions)
+
+</div>
