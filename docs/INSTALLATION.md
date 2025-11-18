@@ -120,7 +120,7 @@ sudo apt-get install -y bash git curl jq
 ### Method 1: Direct Download
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/main/bitbucket-workspace-sync.sh
+curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/master/bitbucket-workspace-sync.sh
 
 # Make it executable
 chmod +x bitbucket-workspace-sync.sh
@@ -145,7 +145,7 @@ chmod +x bitbucket-workspace-sync.sh
 ### Method 3: System-wide Installation
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/main/bitbucket-workspace-sync.sh
+curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/master/bitbucket-workspace-sync.sh
 
 # Move to system bin directory
 sudo mv bitbucket-workspace-sync.sh /usr/local/bin/bitbucket-workspace-sync
