@@ -6,7 +6,7 @@
 
 > 🚀 High-performance CLI to clone/update all repositories from a Bitbucket Cloud workspace in parallel
 
-[📖 Full Documentation](docs/README_FULL.md) | [🇪🇸 Español](README_ES.md) | [🐛 Report Bug](../../issues) | [✨ Request Feature](../../issues)
+[📖 Full Documentation](docs/README_FULL_EN.md) | [🇪🇸 Español](README_ES.md) | [🐛 Report Bug](../../issues) | [✨ Request Feature](../../issues)
 
 ---
 
