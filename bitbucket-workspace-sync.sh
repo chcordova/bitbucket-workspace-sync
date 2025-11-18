@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ###############################################################################
-# bitbucket_workspace_clone.sh
+# bitbucket-workspace-sync.sh
 # ---------------------------------------------------------------------------
 # Clone or fast-forward update **all** repositories in a Bitbucket Cloud
 # workspace (API v2).
@@ -73,7 +73,7 @@ Options
 Quick start:
   export BB_USERNAME="alice"
   export BB_APP_PASSWORD="s3cr3t"
-  ./bitbucket_workspace_clone.sh -w myteam -v
+  ./bitbucket-workspace-sync.sh -w myteam -v
 EOF
 exit 0
 }
@@ -118,7 +118,7 @@ Example:
   export BB_USERNAME="your_username"
   export BB_APP_PASSWORD="your_app_password"
   export BB_WORKSPACE="my_workspace"   # or pass -w
-  ./bitbucket_workspace_clone.sh -v
+  ./bitbucket-workspace-sync.sh -v
 ERR
   exit 1
 fi
