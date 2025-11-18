@@ -39,7 +39,7 @@
 
 ```bash
 # 1. Download the script
-curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/main/bitbucket-workspace-sync.sh
+curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/master/bitbucket-workspace-sync.sh
 chmod +x bitbucket-workspace-sync.sh
 
 # 2. Set credentials

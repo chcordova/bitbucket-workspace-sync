@@ -24,7 +24,7 @@
 
 ```bash
 # 1. Descargar
-curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/main/bitbucket-workspace-sync.sh
+curl -O https://raw.githubusercontent.com/chcordova/bitbucket-workspace-sync/master/bitbucket-workspace-sync.sh
 chmod +x bitbucket-workspace-sync.sh
 
 # 2. Configurar credenciales
