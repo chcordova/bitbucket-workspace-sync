@@ -414,7 +414,7 @@ clone_or_update() {
   local repo=$1
   [[ -z $repo ]] && { print_status "<empty>" "🛑 empty slug"; echo "ERROR"; return; }
 
-  cd "$TARGET_CLONE_DIR" 2>/dev/null || cd "$HOME"
+  cd "$TARGET_CLONE_DIR" 2>/dev/null || cd "$HOME" || exit 1
 
   # Repo name is already sanitized when retrieved from API
   local dst="${TARGET_CLONE_DIR}/${repo}"
@@ -449,9 +449,11 @@ clone_or_update() {
         clone_cmd="$clone_cmd --filter=blob:none"
       fi
       
-      eval "$clone_cmd \"$auth\" \"$dst\"" \
-        && { state="cloned"; token="CLONED"; } \
-        || { state="❌ clone failed"; token="ERROR"; }
+      if eval "$clone_cmd \"$auth\" \"$dst\""; then
+        state="cloned"; token="CLONED"
+      else
+        state="❌ clone failed"; token="ERROR"
+      fi
     fi
     local elapsed=$((SECONDS - start))
     print_status "$repo" "$state" "$elapsed"
